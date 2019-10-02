@@ -136,7 +136,13 @@ set backspace=indent,eol,start
 "----------------------------------------------------------
 set showmatch " 括弧の対応関係を一瞬表示する
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
-
+" 開波括弧を入力すると閉括弧を補完する
+inoremap { {}<LEFT>
+" 開括弧を入力すると閉括弧を補完する
+inoremap ( ()<LEFT>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap ( ()<ESC>i
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
 "----------------------------------------------------------
 " マウスでカーソル移動とスクロール
 "----------------------------------------------------------
@@ -247,3 +253,4 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2E4340 ctermbg=gray
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=darkgray
 " ガイドの幅
 let g:indent_guides_guide_size =3
+
