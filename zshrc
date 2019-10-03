@@ -141,6 +141,9 @@ setopt hist_reduce_blanks
 # キーバインディングをvim風に(-eはemacs)
 # bindkey -e
 bindkey -v
+
+# コマンドのスペルを訂正する
+setopt correct
  
 # zsh-completionsの設定
 fpath=(/path/to/homebrew/share/zsh-completions $fpath)
