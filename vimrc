@@ -258,3 +258,9 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=darkgr
 " ガイドの幅
 let g:indent_guides_guide_size =3
 
+"----------------------------------------------------------
+"表示関連
+"----------------------------------------------------------
+" 長い行数でも＠にせずに描画する
+set display=lastline"
+"
