@@ -264,3 +264,6 @@ let g:indent_guides_guide_size =3
 " 長い行数でも＠にせずに描画する
 set display=lastline"
 "
+"
+" 入力モード中に素早くjjと入力した場合はESCとみなす
+inoremap jj <Esc>
