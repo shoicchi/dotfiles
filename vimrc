@@ -44,6 +44,11 @@ NeoBundle 'rking/ag.vim'
 " プロジェクトに入ってるESLintを読み込む
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 
+"" space + ne -> sidebar
+NeoBundle  'scrooloose/nerdtree'
+NeoBundle  'jistr/vim-nerdtree-tabs'
+
+
 " vimのlua機能が使える時だけ以下のVimプラグインをインストールする
 if has('lua')
     " コードの自動補完
@@ -257,7 +262,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2E4340 ctermbg=gray
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333344 ctermbg=darkgray
 " ガイドの幅
 let g:indent_guides_guide_size =3
-
+"
+"
 "----------------------------------------------------------
 "表示関連
 "----------------------------------------------------------
@@ -265,5 +271,20 @@ let g:indent_guides_guide_size =3
 set display=lastline"
 "
 "
+"
 " 入力モード中に素早くjjと入力した場合はESCとみなす
 inoremap jj <Esc>
+
+
+"----------------------------------------------------------
+"ディレクトリツリーnerdtrr
+"----------------------------------------------------------
+let g:NERDTreeChDirMode=2
+let g:nerdtree_tabs_focus_on_files=1
+let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
+let g:NERDTreeWinSize = 30
+let NERDTreeShowHidden=1
+nnoremap <silent><C-d> :NERDTreeToggle<CR>
+map <C-l> gt
+map <C-h> gT
+
